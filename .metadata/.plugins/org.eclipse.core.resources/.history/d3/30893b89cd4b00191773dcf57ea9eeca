@@ -1,0 +1,16 @@
+package com.POM;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class NewTours_WelcomeMercuryTours extends BaseTest {
+	@Test
+	public void homePage()
+	{
+		WelcomeMercuryTours wmt = PageFactory.initElements(driver, WelcomeMercuryTours.class);
+		wmt.signOn();
+		wmt.register();
+	}
+	
+
+}

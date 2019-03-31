@@ -1,0 +1,14 @@
+package com.POM;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class WelcomeMercuryTours {
+	//<a href="mercurysignon.php?osCsid=dda732ccd84e4e4d529d7e7cdbbf39c6">SIGN-ON</a>
+	@FindBy(linkText="SIGN-ON")
+	WebElement signon;
+	public void signOn()
+	{
+		signon.click();
+	}
+}	

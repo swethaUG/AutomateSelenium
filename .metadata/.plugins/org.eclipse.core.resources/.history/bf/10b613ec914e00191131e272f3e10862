@@ -1,0 +1,7 @@
+<suite name="AutomateSelenium">
+<test name="Keyword_Orange_Login_Test">
+<classes>
+<class name"com.KeywordFramework.Keyword_Orange_Login_Test "/>
+</classes>
+</test>
+</suite>

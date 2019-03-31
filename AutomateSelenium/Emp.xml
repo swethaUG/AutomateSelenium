@@ -1,0 +1,12 @@
+<suite name="AutomateSelenium">
+- <test name="main">
+- <classes>
+  <class name="com.annotaion.New" /> 
+  </classes>
+  </test>
+  <test name="addEmployee">
+  <classes>
+  <class name="com.annotaion.OrangeEmployee"/>
+  </classes>
+ </test>
+</suite>

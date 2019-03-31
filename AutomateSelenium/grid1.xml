@@ -1,0 +1,8 @@
+<suite name="AutomateSelenium">
+<test name="LogIn">
+<parameter name="browser" value="chrome"/>
+<classes>
+<class name="com.griddemo.LogInTest"/>
+</classes>
+</test>
+</suite>

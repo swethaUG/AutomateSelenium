@@ -1,0 +1,17 @@
+package com.POM;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class NewTours_WelcomeMercuryTours extends BaseTest {
+	@Test
+	public void homePage() throws InterruptedException
+	{
+		WelcomeMercuryTours wmt = PageFactory.initElements(driver, WelcomeMercuryTours.class);
+		wmt.signOn();
+		Thread.sleep(1000);
+		wmt.register();
+	}
+	
+
+}

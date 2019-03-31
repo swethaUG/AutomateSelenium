@@ -1,0 +1,12 @@
+<suite name="AutomateSelenium">
+<test name=" main">
+<classes>
+<class name="com.keyboard.KeybosrdOrangeLogin"/>
+</classes>
+</test>
+<test name="addEmployee">
+<classes>
+<class name="com.keyboard.KeyboardOrangeEmployee"/>
+</classes>
+</test>
+</suite>

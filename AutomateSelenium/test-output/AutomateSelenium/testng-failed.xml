@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [AutomateSelenium]">
+  <test name="register(failed)">
+    <classes>
+      <class name="com.annotaion.OrangeEmployee">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.annotaion.OrangeEmployee -->
+      <class name="com.annotaion.RegistrationValidation">
+        <methods>
+          <include name="aNewRegistration"/>
+          <include name="setup"/>
+          <include name="register"/>
+        </methods>
+      </class> <!-- com.annotaion.RegistrationValidation -->
+    </classes>
+  </test> <!-- register(failed) -->
+</suite> <!-- Failed suite [AutomateSelenium] -->

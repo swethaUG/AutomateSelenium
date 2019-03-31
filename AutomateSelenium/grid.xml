@@ -1,0 +1,8 @@
+<suite name="Automate Selenium">
+<test name="AddEmployee">
+<parameter name="Browser" value="chrome"/>
+<classes>
+<class name="com.keyboard.KeyboardOrangeEmployee"/>
+</classes>
+</test>
+</suite>

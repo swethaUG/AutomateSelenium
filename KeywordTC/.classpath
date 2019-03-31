@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/selenium-server-standalone-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/animal-sniffer-annotations-1.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/byte-buddy-1.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/error_prone_annotations-2.0.18.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/gson-2.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/guava-23.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/j2objc-annotations-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/jsr305-1.3.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-api-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-chrome-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-edge-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-firefox-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-ie-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-java-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-opera-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-remote-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-safari-driver-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/jar_files/selenium-support-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/selenium-java-3.6.0(1)/client-combined-3.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/selenium-java-3.6.0(1)/client-combined-3.6.0-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/poi-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/poi-examples-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/poi-excelant-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/poi-ooxml-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/poi-ooxml-schemas-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/poi-scratchpad-3.15.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/New folder (3)/ApachePoiJarFiles/ApachePoiJarFiles/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

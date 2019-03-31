@@ -1,0 +1,41 @@
+package com.Automation;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class OrangeEmployeeFunctionality {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+			WebDriver driver=null;
+			String url="http://localhost/orangehrm/orangehrm-2.6/orangehrm-2.6/login.php";
+			System.setProperty("webdriver.chrome.driver","C:/Users/admin/Desktop/New folder (3)/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+			String LoginName="admin";
+			String Password="admin";
+			//<input name="txtUserName" type="text" class="loginText" tabindex="1">
+			driver.findElement(By.name("txtUserName")).sendKeys(LoginName);
+			//<input name="txtPassword" type="password" class="loginText" tabindex="2">
+			driver.findElement(By.name("txtPassword")).sendKeys(Password);
+			//<input type="Submit" name="Submit" value="Login" class="button" tabindex="3">
+			driver.findElement(By.name("Submit")).click();
+			//<span class="drop current">PIM</span>
+			Thread.sleep(10000);
+			WebElement PIM = driver.findElement(By.tagName("PIM"));
+			Actions a=new Actions(driver);
+			a.moveToElement(PIM).perform();
+			
+			
+			
+			
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package com.OHRM.testscripts;
+
+import org.testng.annotations.Test;
+
+import com.OHRM.lib.General;
+
+public class TC_101 {
+	@Test
+	public void logInTest()
+	{
+		General g = new General();
+		g.setUp();
+		g.logIn();
+		g.verifyLogin();
+		g.tearDown();
+	}
+
+}

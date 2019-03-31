@@ -1,0 +1,81 @@
+package com.objectarray;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class Firstarraydata extends Bclass {
+	
+		@DataProvider
+		
+			public Object[][] getValue()
+			{
+				Object[][] data = new Object[2][3];
+				data[0][0] ="admin";
+				data[0][1] ="admin";
+				//data[0][2] ="admin";
+				//data[1][0] ="swetha";
+				//data[1][1] ="admin";
+				//data[1][1] ="admin";
+				return data;
+				
+			}
+		@Test(dataProvider ="getValue")
+		public void main(String Uname,String pwd) throws IOException, InterruptedException
+		{
+		
+		FileInputStream filep =new FileInputStream("C:/Users/admin/Desktop/New folder (2)/AutomateSelenium/OrangeLogin.properties");
+	    Properties pr = new Properties();
+	    pr.load(filep);
+		String Expected_Element="Welcome admin";
+		String Expected_Element1="Invalid Login";
+		
+		
+		
+			
+			driver.findElement(By.name(pr.getProperty("LoginName"))).clear();
+			driver.findElement(By.name(pr.getProperty("LoginName"))).sendKeys(Uname);
+			driver.findElement(By.name(pr.getProperty("Password"))).clear();
+			driver.findElement(By.name(pr.getProperty("Password"))).sendKeys(pwd);
+			driver.findElement(By.name(pr.getProperty("Login"))).click();
+			try
+			{
+			        if((driver.findElement(By.xpath("//*[@id='option-menu']/li[1]")).getText()).contains(Expected_Element))
+			        {
+				
+				          System.out.println("Login validation is sucessfull,PASS");
+				          
+				    }
+			        else if((driver.findElement(By.xpath("//*[@id='Table_01']/tbody/tr[1]/td[2]/table/tbody/tr[5]/td[2]/strong/font")).getText()).contains(Expected_Element1))
+			        {
+				          
+			        	throw new Exception();
+				         
+			        }
+		     }
+		
+		catch (Exception e)
+		            {
+			             System.out.println("Login validation is unsucessfull,Fail" );
+			             //File ErrorScreen=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			             //FileUtils.copyFile(ErrorScreen,new File("C:/Users/admin/Desktop/New folder (2)/AutomateSelenium/Screen/"+i+".png"));
+			
+		             }
+			
+			driver.navigate().back();
+			
+	    }		
+		   
+			   
+		
+	
+
+}
+
+
+

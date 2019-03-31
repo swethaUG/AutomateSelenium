@@ -1,0 +1,7 @@
+<suite name="AutomateSelenium">
+  <test name="main">
+    <classes>
+      <class name="com.annotaion.New"/>
+    </classes>
+  </test>
+</suite>

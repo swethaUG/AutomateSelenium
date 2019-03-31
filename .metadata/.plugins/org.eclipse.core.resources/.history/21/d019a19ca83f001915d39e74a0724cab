@@ -1,0 +1,58 @@
+package com.Automation;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class OrangeEmployeeFunctionality {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+			WebDriver driver=null;
+			String url="http://localhost/orangehrm/orangehrm-2.6/orangehrm-2.6/login.php";
+			System.setProperty("webdriver.chrome.driver","C:/Users/admin/Desktop/New folder (3)/chromedriver.exe");
+			driver = new ChromeDriver();
+			
+			driver.get(url);
+			driver.manage().window().maximize();
+			String LoginName="admin";
+			String Password="admin";
+			String Lastname="Gummala";
+			String Middlename="Sagar";
+			String Nickname="Swe";
+			//<input name="txtUserName" type="text" class="loginText" tabindex="1">
+			driver.findElement(By.name("txtUserName")).sendKeys(LoginName);
+			//<input name="txtPassword" type="password" class="loginText" tabindex="2">
+			driver.findElement(By.name("txtPassword")).sendKeys(Password);
+			//<input type="Submit" name="Submit" value="Login" class="button" tabindex="3">
+			driver.findElement(By.name("Submit")).click();
+		    //<span class="drop current">PIM</span>
+		   WebElement a=driver.findElement(By.cssSelector("#pim > a > span"));
+		   Actions act= new Actions(driver);
+		   act.moveToElement(a).perform();
+		   driver.findElement(By.cssSelector("#pim > ul > li:nth-child(2) > a > span")).click();
+		   //<iframe style="display:block;margin-left:auto;margin-right:auto;width:100%;" src="./lib/controllers/CentralController.php?reqcode=EMP&amp;VIEW=MAIN&amp;sortField=0&amp;sortOrder0=ASC&amp;VIEW=MAIN" id="rightMenu" name="rightMenu" height="100%;" frameborder="0"></iframe>
+		   driver.switchTo().frame(driver.findElement(By.id("rightMenu")));
+		   //<input type="text" name="txtEmpLastName" id="txtEmpLastName" class="formInputText" maxlength="100" value="">
+		   WebElement LastName= driver.findElement(By.id("txtEmpLastName"));
+		   LastName.sendKeys(Lastname);
+		   //<input type="text" name="txtEmpMiddleName" id="txtEmpMiddleName" class="formInputText" maxlength="100" value="">
+		   WebElement MiddleName = driver.findElement(By.id("txtEmpMiddleName"));
+		   MiddleName.sendKeys(Middlename);
+		   //<input type="text" name="txtEmpNickName" id="txtEmpNickName" class="formInputText" maxlength="100" value=""> 
+		  WebElement NickName = driver.findElement(By.id("txtEmpNickName"));
+		  NickName.sendKeys(Nickname);
+		  //<input type="button" class="savebutton" id="btnEdit" onclick="addEmpMain(); return false;" onmouseover="moverButton(this);" onmouseout="moutButton(this);" value="Save" title="Save">
+		  driver.findElement(By.id("btnEdit")).click();
+		 
+			
+			
+
+	}
+
+	
+}

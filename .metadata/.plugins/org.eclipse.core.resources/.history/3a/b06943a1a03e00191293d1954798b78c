@@ -1,0 +1,61 @@
+package com.Automation;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class OrangeEmployeeFunctionality {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+			WebDriver driver=null;
+			String url="http://localhost/orangehrm/orangehrm-2.6/orangehrm-2.6/login.php";
+			System.setProperty("webdriver.chrome.driver","C:/Users/admin/Desktop/New folder (3)/chromedriver.exe");
+			driver = new ChromeDriver();
+			driver.get(url);
+			driver.manage().window().maximize();
+			String LoginName="admin";
+			String Password="admin";
+			//<input name="txtUserName" type="text" class="loginText" tabindex="1">
+			driver.findElement(By.name("txtUserName")).sendKeys(LoginName);
+			//<input name="txtPassword" type="password" class="loginText" tabindex="2">
+			driver.findElement(By.name("txtPassword")).sendKeys(Password);
+			//<input type="Submit" name="Submit" value="Login" class="button" tabindex="3">
+			driver.findElement(By.name("Submit")).click();
+			//<span class="drop current">PIM</span>
+			//<li class="l1" id="pim" onmouseover="topMenuHover();">
+			//<a href="./index.php?menu_no_top=hr" class="l1_link">
+				//<span class="drop current">PIM</span>
+			//</a>
+			//<ul class="l2" style="left: -999em;">	
+					/*<li class="l2">
+						<a href="./lib/controllers/CentralController.php?reqcode=EMP&amp;VIEW=MAIN&amp;sortField=0&amp;sortOrder0=ASC" target="rightMenu" class="l2_link emplist" onclick="menuclicked(this);">
+							<span>Employee List</span>
+						</a>
+					</li>
+					<li class="l2">
+						<a href="./lib/controllers/CentralController.php?reqcode=EMP&amp;capturemode=addmode" target="rightMenu" class="l2_link empadd" onclick="menuclicked(this);">
+							<span>Add Employee</span>
+						</a>
+					</li>
+
+			</ul>
+			
+			</li>*/
+			Thread.sleep(10000);
+			WebElement PIM = driver.findElement(By.id("pim"));
+			
+			Actions a=new Actions(driver);
+			a.moveToElement(PIM).perform();
+			
+			
+			
+			
+
+	}
+
+}

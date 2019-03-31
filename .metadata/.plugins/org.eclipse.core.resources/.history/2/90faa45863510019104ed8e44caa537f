@@ -1,0 +1,52 @@
+package com.Automation;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.gargoylesoftware.htmlunit.javascript.host.dom.Selection;
+
+public class EmployeeInformation {
+
+	public static void main(String[] args) {
+
+		WebDriver driver=null;
+		String url="http://localhost/orangehrm/orangehrm-2.6/orangehrm-2.6/login.php";
+		System.setProperty("webdriver.chrome.driver","C:/Users/admin/Desktop/New folder (3)/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.get(url);
+		driver.manage().window().maximize();
+		driver.findElement(By.name("txtUserName")).sendKeys("admin");
+		driver.findElement(By.name("txtPassword")).sendKeys("admin");
+		driver.findElement(By.name("Submit")).click();
+		//*[@id="rightMenu"]
+		driver.switchTo().frame(driver.findElement(By.xpath("//*[@id='rightMenu']")));
+		WebElement searchby = driver.findElement(By.xpath("//*[@id='loc_code']"));
+        Select sc = new Select(searchby);
+       List<WebElement> element = sc.getOptions();
+       int size = element.size();
+       System.out.println(size);
+        if(!sc.isMultiple())
+        {
+        	System.out.println("Not a Multiple Selector");
+        	for(int i=0;i<size;i++)
+        	{
+        		String e = element.get(i).getText();
+        		if(e.contains("Emp. ID"))
+        		{
+        			driver.findElement(By.xpath("//*[@id='loc_name']")).sendKeys("0003");
+        		}
+        	}
+        	
+        }
+        else
+        {
+        	System.out.println(" Multiple selector");
+        }
+	}
+
+}

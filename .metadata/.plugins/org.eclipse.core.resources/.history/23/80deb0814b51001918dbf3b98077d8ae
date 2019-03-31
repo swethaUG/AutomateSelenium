@@ -1,0 +1,34 @@
+package com.datadriven;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
+
+import org.openqa.selenium.By;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+public class ObjectArrayOrangeAddEmployee extends Base{
+	@DataProvider
+	public Object[][] getData()
+	{
+		Object[][] data = new Object[1][2];
+		data[0][0] = "admin";
+		data[0][1] = "admin";
+		return data;
+	}
+	@Test(dataProvider="getData",priority=0)
+	public void logIn(String Uname,String pwd) throws IOException
+	{
+		FileInputStream filep =new FileInputStream("C:/Users/admin/Desktop/New folder (2)/AutomateSelenium/OrangeAddEmployee.properties");
+	    Properties pr = new Properties();
+	    pr.load(filep);
+		driver.findElement(By.name(pr.getProperty("LoginName"))).sendKeys(Uname);
+		driver.findElement(By.name(pr.getProperty("Password"))).sendKeys(pwd);
+		driver.findElement(By.name(pr.getProperty("Login"))).click();
+	}
+	
+	
+
+}
